@@ -1,0 +1,27 @@
+{
+  "name": "fillPattern",
+  "version": "0.0.1",
+  "description": "Create fill patterns for canvas and SVG renderers",
+  "main": "./bundles/fillPattern.min.js",
+  "scripts": {
+    "dev": "npm run tslint && npm run dev:tsc && webpack --mode development",
+    "dev:tsc": "tsc && tsc -m es6 --outDir lib-esm",
+    "dev:watch": "nodemon --exec 'npm run dev || exit 1'",
+    "tslint": "tslint --project .",
+    "build": "npm run dev:tsc && webpack --mode production",
+    "clean": "rm -rf bundles lib lib-esm",
+    "open": "open demo/index.html"
+  },
+  "repository": "https://github.com/ryancat/fillPattern.git",
+  "author": "Ryan Chen <xryanchen@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^1.17.5",
+    "ts-loader": "^4.4.1",
+    "tslint": "^5.10.0",
+    "typescript": "^2.9.2",
+    "webpack": "^4.12.0",
+    "webpack-cli": "^3.0.8",
+    "uglifyjs-webpack-plugin": "^1.2.6"
+  }
+}
